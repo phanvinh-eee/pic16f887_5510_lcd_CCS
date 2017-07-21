@@ -1,130 +1,551 @@
-ÀÄmain
-   ÀÄMAIN  0/648  Ram=3
+ÀÄpic_ds1302_lcd84x48_1
+   ÀÄMAIN  1/260  Ram=3
       ÃÄ@cinit1  (Inline)  Ram=0
-      ÃÄinit  0/146  Ram=1
-      ³  ÃÄnokia_init  0/94  Ram=0
-      ³  ³  ÃÄ@delay_us1  0/28  Ram=1
-      ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
-      ³  ³  ÃÄnokia_write_command  0/44  Ram=1
-      ³  ³  ³  ÀÄnokia_write_dorc  0/62  Ram=2
-      ³  ³  ÃÄnokia_write_command  0/44  Ram=1
+      ÃÄrtc_init  0/35  Ram=2
+      ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ÃÄwrite_ds1302_byte  0/24  Ram=2
+      ³  ³  ÀÄwrite_ds1302_byte  0/24  Ram=2
+      ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄwrite_ds1302_byte  0/24  Ram=2
+      ³  ÀÄwrite_ds1302  0/15  Ram=2
+      ³     ÀÄ*
+      ÃÄnokia_init  0/59  Ram=0
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ÀÄnokia_write_dorc  0/28  Ram=2
+      ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄnokia_clean_ddram  0/21  Ram=0
+      ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄnokia_write_command  0/20  Ram=1
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÀÄnokia_write_data  0/20  Ram=1
+      ³  ³     ÀÄnokia_write_dorc  0/28  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄnokia_write_command  0/20  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄnokia_write_command  0/20  Ram=1
+      ³     ÀÄ*
+      ÃÄnokia_clean_ddram  0/21  Ram=0
+      ³  ÀÄ*
+      ÃÄrtc_get_time  (Inline)  Ram=4
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄrm_bcd  0/20  Ram=4
+      ³  ³  ÀÄ@MUL88  0/37  Ram=2
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄrm_bcd  0/20  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄrm_bcd  0/20  Ram=4
+      ³     ÀÄ*
+      ÃÄrtc_get_date  (Inline)  Ram=5
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄrm_bcd  0/20  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄrm_bcd  0/20  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄrm_bcd  0/20  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄread_ds1302  0/46  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄrm_bcd  0/20  Ram=4
+      ³     ÀÄ*
+      ÃÄcontrol_time  2/595  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlog_screen  0/53  Ram=2
+      ³  ³  ÃÄnokia_clean_ddram  0/21  Ram=0
       ³  ³  ³  ÀÄ*
-      ³  ³  ÃÄnokia_write_command  0/44  Ram=1
+      ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
       ³  ³  ³  ÀÄ*
-      ³  ³  ÃÄnokia_write_command  0/44  Ram=1
+      ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄtable_to_nokialcd  (Inline)  Ram=2
+      ³  ³  ³  ³     ÃÄ@MUL88  0/37  Ram=2
+      ³  ³  ³  ³     ÃÄ@const680  0/244  Ram=0
+      ³  ³  ³  ³     ÃÄ@MUL88  0/37  Ram=2
+      ³  ³  ³  ³     ÃÄ@const683  0/250  Ram=0
+      ³  ³  ³  ³     ÃÄnokia_write_data  0/20  Ram=1
+      ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³     ÀÄnokia_write_data  0/20  Ram=1
+      ³  ³  ³  ³        ÀÄ*
+      ³  ³  ³  ÀÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
       ³  ³  ³  ÀÄ*
-      ³  ³  ÃÄnokia_write_command  0/44  Ram=1
+      ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
       ³  ³  ³  ÀÄ*
-      ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
-      ³  ³  ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ³  ³  ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ³  ³  ³  ÃÄnokia_write_command  0/44  Ram=1
-      ³  ³  ³  ³  ³  ÀÄ*
-      ³  ³  ³  ³  ÀÄnokia_write_command  0/44  Ram=1
-      ³  ³  ³  ³     ÀÄ*
-      ³  ³  ³  ÀÄnokia_write_data  0/44  Ram=1
-      ³  ³  ³     ÀÄnokia_write_dorc  0/62  Ram=2
-      ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
-      ³  ³  ÃÄnokia_write_command  0/44  Ram=1
+      ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
       ³  ³  ³  ÀÄ*
-      ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
-      ³  ³  ÀÄnokia_write_command  0/44  Ram=1
+      ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄrtc_set_datetime  0/70  Ram=7
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ³  ÀÄ@MUL88  0/37  Ram=2
+      ³  ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄwrite_ds1302  0/15  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄget_bcd  0/23  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄwrite_ds1302  0/15  Ram=2
       ³  ³     ÀÄ*
-      ³  ÃÄnokia_clean_ddram  0/38  Ram=0
+      ³  ÃÄnokia_clean_ddram  0/21  Ram=0
       ³  ³  ÀÄ*
-      ³  ÃÄnokia_gotoxy  0/26  Ram=3
+      ³  ÃÄlog_screen  0/53  Ram=2
       ³  ³  ÀÄ*
-      ³  ÃÄ@PSTRINGC_664  0/32  Ram=2
-      ³  ³  ÀÄnokia_printchar  0/10  Ram=1
-      ³  ³     ÀÄtable_to_nokialcd  0/118  Ram=1
-      ³  ³        ÃÄ@const646  0/256  Ram=0
-      ³  ³        ÃÄ@const649  0/256  Ram=0
-      ³  ³        ÃÄnokia_write_data  0/44  Ram=1
+      ³  ÃÄrtc_set_datetime  0/70  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄlog_screen  0/53  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄnokia_clean_ddram  0/21  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄnokia_clean_ddram  0/21  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄ@goto11929  2/8  Ram=0
+      ³  ÃÄnokia_clean_ddram  0/21  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄdisplay_screen  1/1275  Ram=0
+      ³  ³  ÃÄclock_screen  (Inline)  Ram=3
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÀÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGCN7_698  0/87  Ram=5
+      ³  ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÀÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄbutton_ok  0/68  Ram=1
+      ³  ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÀÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³        ÀÄ*
+      ³  ³  ÃÄ@goto11523  1/8  Ram=0
+      ³  ³  ÃÄmenu_screen  (Inline)  Ram=0
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ³  ÀÄtable_to_nokialcd_inverted  (Inline)  Ram=2
+      ³  ³  ³  ³  ³     ÃÄ@MUL88  0/37  Ram=2
+      ³  ³  ³  ³  ³     ÃÄ@const680  0/244  Ram=0
+      ³  ³  ³  ³  ³     ÃÄ@MUL88  0/37  Ram=2
+      ³  ³  ³  ³  ³     ÃÄ@const683  0/250  Ram=0
+      ³  ³  ³  ³  ³     ÃÄnokia_write_data  0/20  Ram=1
+      ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³     ÀÄnokia_write_data  0/20  Ram=1
+      ³  ³  ³  ³  ³        ÀÄ*
+      ³  ³  ³  ³  ÀÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄbutton_ok  0/68  Ram=1
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄedit_time  1/121  Ram=2
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÀÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄbutton_ok  0/68  Ram=1
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄbutton_ok  0/68  Ram=1
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄedit_date  (Inline)  Ram=4
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄbutton_ok  0/68  Ram=1
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄbutton_ok  0/68  Ram=1
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄalarm_edit  (Inline)  Ram=3
+      ³  ³     ÃÄalarm_screen  (Inline)  Ram=2
+      ³  ³     ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@const818  0/9  Ram=0
+      ³  ³     ³  ÃÄ@PSTRINGCN7_700  1/91  Ram=5
+      ³  ³     ³  ³  ÃÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³     ³  ³  ³  ÀÄ*
+      ³  ³     ³  ³  ÀÄnokia_printchar_inverted  0/63  Ram=1
+      ³  ³     ³  ³     ÀÄ*
+      ³  ³     ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@PSTRINGCN7_700  1/91  Ram=5
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@const818  0/9  Ram=0
+      ³  ³     ³  ÃÄ@PSTRINGCN7_698  0/87  Ram=5
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@const818  0/9  Ram=0
+      ³  ³     ³  ÃÄ@PSTRINGCN7_700  1/91  Ram=5
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@PRINTF_D_700  0/87  Ram=6
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@PSTRINGCN7_700  1/91  Ram=5
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@const818  0/9  Ram=0
+      ³  ³     ³  ÃÄ@PSTRINGCN7_698  0/87  Ram=5
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÀÄbutton_ok  0/68  Ram=1
+      ³  ³     ³     ÀÄ*
+      ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄ@PSTRINGCN7_698  0/87  Ram=5
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄedit_time  1/121  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÀÄset_alarm_screen  (Inline)  Ram=1
+      ³  ³        ÃÄnokia_gotoxy  0/13  Ram=3
       ³  ³        ³  ÀÄ*
-      ³  ³        ÀÄnokia_write_data  0/44  Ram=1
+      ³  ³        ÃÄ@PSTRINGCN7_698  0/87  Ram=5
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄ@PRINTF_D_698  0/87  Ram=6
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄnokia_printchar  0/59  Ram=1
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄ@PSTRINGC7_698  0/86  Ram=4
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄnokia_gotoxy  0/13  Ram=3
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄ@PSTRINGC7_700  0/86  Ram=4
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÀÄbutton_ok  0/68  Ram=1
       ³  ³           ÀÄ*
-      ³  ÃÄnokia_gotoxy  0/26  Ram=3
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄ@goto12027  2/8  Ram=0
+      ³  ÃÄnokia_clean_ddram  0/21  Ram=0
       ³  ³  ÀÄ*
-      ³  ÃÄ@PSTRINGC_664  0/32  Ram=2
+      ³  ÃÄdisplay_screen  1/1275  Ram=0
       ³  ³  ÀÄ*
-      ³  ÃÄnokia_gotoxy  0/26  Ram=3
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄds18b20_read  1/49  Ram=7
+      ³  ÃÄonewire_reset  1/29  Ram=1
+      ³  ³  ÃÄ@delay_us1  0/17  Ram=1
+      ³  ³  ÀÄ@delay_us1  0/17  Ram=1
+      ³  ÃÄonewire_write  1/32  Ram=2
+      ³  ÃÄonewire_write  1/32  Ram=2
+      ³  ÃÄonewire_read  1/37  Ram=2
+      ³  ÃÄonewire_reset  1/29  Ram=1
       ³  ³  ÀÄ*
-      ³  ÃÄ@PSTRINGC_664  0/32  Ram=2
-      ³  ³  ÀÄ*
-      ³  ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ³  ÀÄ*
-      ³  ÃÄ@PSTRINGC_664  0/32  Ram=2
-      ³  ³  ÀÄ*
-      ³  ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ³  ÀÄ*
-      ³  ÃÄ@PSTRINGC_664  0/32  Ram=2
-      ³  ³  ÀÄ*
-      ³  ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ³  ÀÄ*
-      ³  ÃÄ@PSTRINGC_664  0/32  Ram=2
-      ³  ³  ÀÄ*
-      ³  ÀÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
+      ³  ÃÄonewire_write  1/32  Ram=2
+      ³  ÃÄonewire_write  1/32  Ram=2
+      ³  ÃÄonewire_read  1/37  Ram=2
+      ³  ÀÄonewire_read  1/37  Ram=2
+      ÃÄdisplay_screen  1/1275  Ram=0
       ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const691  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const682  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const685  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const688  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const697  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const700  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const703  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/38  Ram=1
-      ÃÄnokia_clean_ddram  0/38  Ram=0
-      ³  ÀÄ*
-      ÃÄnokia_gotoxy  0/26  Ram=3
-      ³  ÀÄ*
-      ÃÄ@const694  0/518  Ram=0
-      ÃÄnokia_write_data  0/44  Ram=1
-      ³  ÀÄ*
-      ÀÄ@delay_ms1  0/38  Ram=1
+      ÀÄalarm_warning  1/52  Ram=2
+         ÃÄ@delay_ms1  0/20  Ram=1
+         ÃÄnokia_gotoxy  0/13  Ram=3
+         ³  ÀÄ*
+         ÃÄ@PSTRINGC7_698  0/86  Ram=4
+         ³  ÀÄ*
+         ÀÄ@delay_ms1  0/20  Ram=1
