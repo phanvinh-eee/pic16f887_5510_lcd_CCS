@@ -1,0 +1,120 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     char_row
+005     charsel
+006     charpos
+007     chardata
+008-009 ddram
+00A-00B MAIN.i
+00C     @delay_us1.P1
+00C     nokia_gotoxy.xnokia
+00C     init.@SCRATCH1
+00C     @PSTRINGC_664.@SCRATCH1
+00C     MAIN.@SCRATCH1
+00D     nokia_gotoxy.ynokia
+00D     @delay_ms1.P1
+00D     @PSTRINGC_664.@SCRATCH2
+00E     nokia_printchar.cvar
+00E     nokia_gotoxy.@SCRATCH1
+00F     nokia_write_data.bytefornokia_data
+00F     nokia_write_command.bytefornokia_command
+00F     table_to_nokialcd.@SCRATCH1
+010     nokia_write_dorc.bytefornokia
+011     nokia_write_dorc.caa
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  TABLE1.call
+000014  TABLE1.data
+000104  TABLE2.call
+000114  TABLE2.data
+000204  naruto.call
+000212  naruto.data
+00040A  flap.call
+000418  flap.data
+000610  flap2.call
+00061E  flap2.data
+000816  logo.call
+000824  logo.data
+000A1C  android.call
+000A2A  android.data
+000C22  google.call
+000C30  google.data
+000E28  apple.call
+000E36  apple.data
+00102E  facebook.call
+00103C  facebook.data
+001234  @const707.call
+001246  @const709.call
+001256  @const710.call
+001260  @const711.call
+001272  @const712.call
+00127E  @const713.call
+001286  @delay_us1
+0012A2  @delay_ms1
+0012C8  nokia_write_dorc
+001306  nokia_write_command
+001332  nokia_gotoxy
+00134C  nokia_write_data
+001378  nokia_clean_ddram
+00139E  nokia_init
+0013FC  table_to_nokialcd
+001472  nokia_printchar
+00147C  @PSTRINGC_664
+00149C  init
+00152E  MAIN
+00152E  @cinit1
+00153E  @cinit2
+
+Project Directory:
+    E:\embedded system\pic\project\lcdpic18f4550\
+
+Project Files:
+    main.c                                                  [14-Apr-16 14:51  CRC=EEC5F76C]
+    main.h                                                  [14-Apr-16 14:54  CRC=F5281DB7]
+    C:\Program Files (x86)\PICC\Devices\18F4550.h           [12-Nov-13 14:35  CRC=5337E248]
+    5110lib\3310(modified).c                                [30-Mar-16 17:15  CRC=C2CA8F76]
+
+Source signature=BCBB1657
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
